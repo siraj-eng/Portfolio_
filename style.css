@@ -92,7 +92,7 @@ header{
     display:flex;
     flex-wrap: wrap;
     align-items: center;
-    background: #ebdbc8;
+    background: hwb(33 78% 8%);
     gap:1rem;
 }
 
@@ -187,19 +187,19 @@ header{
 
 .about-content h2{
     text-align: left;
-    line-height: 1;
+    line-height: 1.5;
 
 }
 
 .about-content h3 {
     font-size: 1.6rem;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .about-content p{
     font-size: 1rem;
     margin: 2rem 0 2rem;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .about-content .btn{
@@ -209,100 +209,290 @@ header{
     border-radius: 4px;
     transition: background 0.3s;
 }
-
+body1{
+    background-color:hwb(33 78% 8%);
+    color:var(--second-color);
+}
 .sub-title{
-   text-align: center;
+   text-align: right;
    font-size: 60px;
    padding-bottom: 70px;
-   padding-top: 70px;
-   padding-top: 30px;  
+   padding-top: 30px;
+     
 }
 
 .sub-title span{
     color:#1e3932;
 }
 
-.container1{
-    width: 600px;
-    height: 600px;
-    padding: 75px 90px;
-    margin-left: 120px;
-}
-
-.heading{
+.container1 {
+    padding: 2rem;
     text-align: center;
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    text-decoration-thickness: 3px;
-    margin-bottom: 30px;
 }
 
-.bar{
-    font-size: 23px;
+.heading1 {
+    font-size: 2rem;
+    color:#1e3932;
+    margin-bottom: 2rem;
 }
 
-.technical-bars .bar {
-    margin-bottom: 20px;
+.technical-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.bar {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 1rem;
 }
 
-.technical-bars .bar span {
-    flex: 1;
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--second-color);
+.bar i {
+    font-size: 2rem;
+    color: #008148;
 }
 
-.technical-bars .bar .progress-line {
-    position: relative;
-    flex: 3;
-    height: 10px;
-    background-color: #e5e5e5;
-    border-radius: 5px;
-    overflow: hidden;
+.info span {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
-
-.technical-bars .bar .progress-line span {
-    position: absolute;
-    top: 0;
-    left: 0;
+ 
+.progress-line span {
+    display: block;
     height: 100%;
-    background-color: var(--main-color);
-    border-radius: 5px;
-    width: 0;
-    animation: grow 2s ease-in-out forwards;
+    background-color: #008148;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: grow 1s ease forwards;
 }
 
-.technical-bars .bar.html .progress-line span {
-    width: 90%;
-}
-
-.technical-bars .bar.css .progress-line span {
-    width: 85%;
-}
-
-.technical-bars .bar.javascript .progress-line span {
-    width: 75%;
-}
-
-.technical-bars .bar.react .progress-line span {
-    width: 70%;
-}
-
-.technical-bars .bar.php .progress-line span {
-    width: 65%;
-}
-
-@keyframes animate{
-    100%{
-      transform: scale(1);
+/* Animations */
+@keyframes grow {
+    to {
+        transform: scaleX(1);
     }
 }
 
-.technical-bars .bar .progress-line span{
+/* Progress Values */
+.progress-line.html span {
+    width: 90%;
+}
+
+.progress-line.python span {
+    width: 85%;
+}
+
+.progress-line.css span {
+    width: 95%;
+}
+
+.progress-line.java span {
+    width: 80%;
+}
+
+.progress-line.javascript span {
+    width: 70%;
+}
+
+/* Progress Bar Container */
+.progress-line {
+    position: relative;
+    flex: 1;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px; /* Add space for percentage and triangle */
+}
+
+/* Progress Bar Fill */
+.progress-line span {
+    display: block;
     height: 100%;
-    background-color: #1e3932;
+    background-color: #008148;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: grow 1s ease forwards;
+    position: relative; /* Important for pseudo-elements */
+}
+
+/* Percentage Display */
+.progress-line span::after {
+    content: attr(data-percentage); /* Dynamically display percentage */
     position: absolute;
+    top: -20px; /* Space above the bar */
+    right: 0; /* Align at the end of the bar */
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    opacity: 0; /* Hidden initially */
+    z-index: 2; /* Ensure it's visible */
+    animation: showText 0.5s 1.5s linear forwards;
+}
+
+
+/* Triangle Pointer */
+.progress-line span::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0;
+    border-right-width: 0;
+    border-top-color: #333;
+    top: -12px; /* Position just above the bar */
+    right: 0; /* Align at the end of the bar */
+    opacity: 0; /* Hidden initially */
+    z-index: 1;
+    animation: showText 0.5s 1.5s linear forwards;
+}
+
+/* Show Text Animation */
+@keyframes showText {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Grow Animation */
+@keyframes grow {
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* Progress Values (Dynamic widths for progress bar) */
+.progress-line.html span {
+    width: 90%; /* Actual width of the bar */
+}
+
+.progress-line.python span {
+    width: 85%;
+}
+
+.progress-line.css span {
+    width: 95%;
+}
+
+.progress-line.java span {
+    width: 80%;
+}
+
+.progress-line.javascript span {
+    width: 70%;
+}
+
+/* General Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem auto;
+}
+
+/* Heading Style */
+.heading2 {
+    color: #1e3932;
+    font-weight: 500;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Radial Bar Container */
+.radial-bars {
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+/* Individual Radial Bar */
+.radial-bar {
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* SVG Circle */
+.circle-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 130%;
+    height: 60%;
+}
+
+/* Background Circle */
+.background-circle {
+    stroke-width: 8;
+    stroke: #e0e0e0;
+    fill: transparent;
+}
+
+/* Progress Circle */
+.progress-circle {
+    stroke-width: 8;
+    stroke: #008148;
+    fill: transparent;
+    stroke-dasharray: 251.2;
+    stroke-dashoffset: 251.2;
+    stroke-linecap: round;
+    animation: animate-progress 2s linear forwards;
+}
+
+/* Percentage Text (Inside the Circle) */
+.percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -70%);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Descriptive Text (Below the Circle) */
+.text {
+    margin-top: 1rem; /* Space below the circle */
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+/* Keyframes for Animating the Progress Circle */
+@keyframes animate-progress {
+    100% {
+        stroke-dashoffset: 25.12; /* 90% progress (251.2 * (1 - 0.9)) */
+    }
+}
+
+/* Individual Progress Circle Animations */
+.radial-bar:nth-child(1) .progress-circle {
+    animation: animate-progress 2s linear forwards;
+}
+
+.radial-bar:nth-child(2) .progress-circle {
+    animation: animate-progress 2s linear forwards;
+    animation-delay: 0.5s;
+}
+
+.radial-bar:nth-child(3) .progress-circle {
+    animation: animate-progress 2s linear forwards;
+    animation-delay: 1s;
+}
+
+.radial-bar:nth-child(4) .progress-circle {
+    animation: animate-progress 2s linear forwards;
+    animation-delay: 1.5s;
 }
