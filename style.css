@@ -723,73 +723,64 @@ body1{
     color: #333;
 }
 
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.contact-form .form-group {
-    position: relative;
-}
-
-.contact-form input, 
-.contact-form textarea {
-    width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    background: rgba(255, 255, 255, 0.8);
-    color: #333;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    outline: none;
-    transition: box-shadow 0.3s ease;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-    color: #888;
-}
-
-.contact-form input:focus, 
-.contact-form textarea:focus {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-}
-
-.contact-form .btn-submit {
-    padding: 15px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #fff;
-    background: #1e3932;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.contact-form .btn-submit:hover {
-    background: #14524d;
-    transform: translateY(-3px);
-}
-
-.contact-form label {
-    display: block;
-    font-size: 1rem;
-    color: #d4d8dc;
-    margin-bottom: 5px;
-}
-
-.contact-section .container {
+/* Form Section */
+form#bookingForm {
+    max-width: 500px;
+    margin: 50px auto;
     padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+form#bookingForm input,
+form#bookingForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form#bookingForm input:focus,
+form#bookingForm textarea:focus {
+    border-color: #666;
+    outline: none;
+    box-shadow: 0px 0px 4px rgba(0, 123, 255, 0.5);
+}
+
+form#bookingForm button {
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form#bookingForm button:hover {
+    background: #1e3932;
+}
+
+/* Response Message */
+#responseMessage {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Add green/red styling dynamically */
+#responseMessage.success {
+    color: green;
+}
+
+#responseMessage.error {
+    color: red;
+}
 
 /*Footer Section*/
 /* Footer Base Styles */
