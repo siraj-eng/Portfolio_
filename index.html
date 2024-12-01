@@ -3,252 +3,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - siraj-eng</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uil@0.7.0/css/icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Portfolio</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Box icons -->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Nav menu -->
+    <!-- Navbar -->
+    <header>
+        <div class="logo">Bakari<span>JACK</span></div>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navbar" id="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Experience</a></li> <!-- Corrected href -->
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#testimonial">Testimonials</a></li> <!-- Fixed href -->
+            <li><a href="#contacts">Contacts</a></li>
+        </ul>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="home-text">
+            <span>Hi, I'm Bakari!</span>
+            <h1>Welcome to my Portfolio</h1>
+            <h2>Explore my work<br>and Experience</h2>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="home-img">
+            <img src="undraw_about_me_re_82bv.svg" alt="About Me">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="undraw_about_me_re_82bv.svg" alt="About Me">
+        </div>
+        <div class="about-content">
+            <h3 class="heading">About <span>Me</span></h3>
+            <h4>Full Stack Developer / Mobile App Developer</h4>
+            <p>
+                I am a versatile Full Stack and Mobile App Developer passionate about building seamless digital experiences. 
+                With expertise in both front-end and back-end development, I create robust web and mobile applications that solve real-world problems. 
+                My focus is on delivering clean, efficient, and user-centered designs while leveraging modern technologies to bring projects to life.
+            </p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+<section id="skills">
+    <div class="container1">
+        <h6 class="heading1">Technical Skills</h6>
+        <div class="technical-bars">
+            <div class="bar">
+                <i style="color:orange" class='bx bxl-html5'></i>
+                <div class="info">
+                    <span>HTML 90%</span>
+                </div>
+                <div class="progress-line html">
+                    <span></span>
+                </div>
+            </div>
+            <div class="bar">
+                <i style="color: aquamarine;" class='bx bxl-python'></i>
+                <div class="info">
+                    <span>Python 85%</span>
+                </div>
+                <div class="progress-line python">
+                    <span></span>
+                </div>
+            </div>
+            <div class="bar">
+                <i style="color: blue;" class='bx bxl-css3'></i>
+                <div class="info">
+                    <span>CSS 95%</span>
+                </div>
+                <div class="progress-line css">
+                    <span></span>
+                </div>
+            </div>
+            <div class="bar">
+                <i class='bx bxl-java'></i>
+                <div class="info">
+                    <span>Java 80%</span>
+                </div>
+                <div class="progress-line java">
+                    <span></span>
+                </div>
+            </div>
+            <div class="bar">
+                <i style="color: yellow" class='bx bxl-javascript'></i>
+                <div class="info">
+                    <span>JavaScript 70%</span>
+                </div>
+                <div class="progress-line javascript">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
-        <nav id="header">
-            <div class="nav-logo" style="position: relative; z-index: 10;">
-                <p class="nav-name">bakari<span>J</span>ack</p>
+        <h7 class="heading2">Professional Skills</h7>
+        <div class="radial-bars">
+            <!-- Radial Bar 1 -->
+            <div class="radial-bar">
+                <svg class="circle-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <circle class="background-circle" cx="50" cy="50" r="40"></circle>
+                    <circle class="progress-circle creativity" cx="50" cy="50" r="40"></circle>
+                </svg>
+                <div class="percentage">90%</div>
+                <div class="text">Creativity</div>
             </div>
-            <div class="nav-menu" id="myNavmenu" style="position: relative; z-index: 10;">
-                <ul class="nav_menu_list">
-                    <li class="nav_list">
-                        <a href="#home" class="nav-link active-link" style="text-decoration: none; color: black;">Home</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav_list">
-                        <a href="#about" class="nav-link" style="text-decoration: none; color: black;">About</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav_list">
-                        <a href="#projects" class="nav-link" style="text-decoration: none; color: black;">Project</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav_list">
-                        <a href="#contacts" class="nav-link" style="text-decoration: none; color: black;">Contacts</a>
-                        <div class="circle"></div>
-                    </li>
-                </ul>
+            <!-- Radial Bar 2 -->
+            <div class="radial-bar">
+                <svg class="circle-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <circle class="background-circle" cx="50" cy="50" r="40"></circle>
+                    <circle class="progress-circle design" cx="50" cy="50" r="40"></circle>
+                </svg>
+                <div class="percentage">80%</div>
+                <div class="text">Design</div>
             </div>
-            
-            <!-- Dark mode -->
-            <div class="Mode" style="position: relative; z-index: 10;">
-                <div class="moon-sun" id="toggle-switch">
-                    <i class="fas fa-moon" id="moon"></i>
-                    <i class="fas fa-sun" id="sun"></i>
-                </div>
+            <!-- Radial Bar 3 -->
+            <div class="radial-bar">
+                <svg class="circle-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <circle class="background-circle" cx="50" cy="50" r="40"></circle>
+                    <circle class="progress-circle development" cx="50" cy="50" r="40"></circle>
+                </svg>
+                <div class="percentage">70%</div>
+                <div class="text">Development</div>
             </div>
-
-            <!-- The nav menu items -->
-            <div class="menu-btn" id="menu-btn" style="position: relative; z-index: 5; display: block; cursor: pointer;">
-                <i class="fas fa-bars"></i>
+            <!-- Radial Bar 4 -->
+            <div class="radial-bar">
+                <svg class="circle-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <circle class="background-circle" cx="50" cy="50" r="40"></circle>
+                    <circle class="progress-circle leadership" cx="50" cy="50" r="40"></circle>
+                </svg>
+                <div class="percentage">60%</div>
+                <div class="text">Leadership</div>
             </div>
-        </nav>
-    
-
-        <!-- Main -->
-        <main class="wrapper">
-        <section class="featured-box" id="home">
-            <div class="featured-text">
-                <div class="hello"></div>
-                <div class="featured-name">
-                    <span class="typedText"></span>
-                </div>
-                <div class="text-info">
-                   <p>My name is Bakari! I'm a full stack developer and Mobile app Developer with 6+ years of experience</p>
-                </div>
-                <div class="text-btn">
-                    <button class="btn hire-btn">Hire me</button>
-                    <button class="btn">Download CV<i class="fas fa-file"></i></button>
-                </div>
-                <div class="social_icons">
-                    <div class="icon_circle"></div>
-                    <div class="icon"><i class="fab fa-instagram"></i></div>
-                    <div class="icon"><i class="fab fa-linkedin-in"></i></div>
-                    <div class="icon"><i class="fab fa-behance"></i></div>
-                    <div class="icon"><i class="fab fa-github"></i></div>
-                </div>
-            </div>
-            <div class="featured-image">
-                <div class="image">
-                    <img src="" alt="">
-                </div>
-            </div>
-        </section> 
-
-        <!-- About me -->
-        <section class="section" id="about">
-            <div class="top-header">
-                <h1>About me</h1>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="about-info">
-                        <figure class="about">
-                            <figcaption>
-                                <img src="" alt="" class="profile" />
-                                <h2>Web developer</h2>
-                                <p>My name is Bakari! I'm a web developer with 6+ years of experience.</p>
-                            </figcaption>
-                        </figure>
-                        <button class="about-me-btn">Hire Me</button>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill-box">
-                        <span class="tittle">HTML</span>
-                        <div class="skill-bar">
-                            <span class="skill-per">
-                                <span class="tooltip">80%</span>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="skill-box">
-                        <span class="tittle">CSS</span>
-                        <div class="skill-bar">
-                            <span class="skill-per">
-                                <span class="tooltip">85%</span>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="skill-box">
-                        <span class="tittle">Python</span>
-                        <div class="skill-bar">
-                            <span class="skill-per">
-                                <span class="tooltip">85%</span>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="skill-box">
-                        <span class="tittle">JavaScript</span>
-                        <div class="skill-bar">
-                            <span class="skill-per">
-                                <span class="tooltip">90%</span>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="skill-box">
-                        <span class="tittle">MySQL</span>
-                        <div class="skill-bar">
-                            <span class="skill-per">
-                                <span class="tooltip">70%</span>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="skill-box">
-                        <span class="tittle">Java</span>
-                        <div class="skill-bar">
-                            <span class="skill-per">
-                                <span class="tooltip">90%</span>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="skill-box">
-                        <span class="tittle">Kotlin</span>
-                        <div class="skill-bar">
-                            <span class="skill-per">
-                                <span class="tooltip">90%</span>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="skill-box">
-                        <span class="tittle">Flutter</span>
-                        <div class="skill-bar">
-                            <span class="skill-per">
-                                <span class="tooltip">90%</span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Project Box -->
-        <section class="section" id="projects">
-            <div class="top-header">
-                <h1>Projects</h1>
-            </div>
-            <div class="project-container">
-                <div class="project-box">
-                    <i class="fa fa-briefcase"></i>
-                    <h3>Completed</h3>
-                    <label>150+ completed projects</label>
-                </div>
-                <div class="project-box">
-                    <i class="fas fa-user"></i>
-                    <h3>Clients</h3>
-                    <label>78+ Happy clients</label>
-                </div>
-                <div class="project-box">
-                    <i class="fas fa-award"></i>
-                    <h3>Experience</h3>
-                    <label>6+ years in web development and mobile app development</label>
-                </div>
-            </div>
-        </section>
-        <!---contact box---->
-        <section class="section" id="contacts">
-            <div class="top-header">
-                <h1>let's work together</h1>
-                <span>Do you have a project in mind </span>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="contact-info">
-                        <h2>Find me  <i class="fa fa-arrow-down-right icon-bottom-right"></i></h2>
-                        <p><i class="fas fa-envelope"></i> Email: abuuyasar@gmail.com</i></p>
-                        <p><i class="fas fa-phone"></i>Phone: +254797544060</i></p>
-                        
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="form-control">
-                        <div class="form-inputs">
-                            <input type="text" class="input-field" placeholder="Your Name">
-                            <input type="text" class="input-field" placeholder="Your Email">
-                        </div>
-                        <div class="text-area">
-                            <input type="text" class="input-subject" placeholder="Subject">
-                            <textarea placeholder="Message"></textarea>
-                        </div>
-                        <div class="form-button">
-                            <button class="btn">Send<i class="fas fa-comment"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-      </main>
-      <!--Footer-->
-      <footer>
-        <div class="middle-footer">
-            <ul class="footer-menu">
-                <li class="footer_menu_list">
-                    <a href="#home">Home</a>
-                </li>
-                <li class="footer_menu_list">
-                    <a href="#about">About</a>
-                </li>
-                <li class="footer_menu_list">
-                    <a href="#projects">Projects</a>
-                </li>
-                <li class="footer_menu_list">
-                    <a href="#contacts">Contact</a>
-                </li>
-            </ul>
         </div>
-        <div class="footer-social-icons">
-            <div class="icon"><i class="fab fa-instagram"></i></div>
-            <div class="icon"><i class="fab fa-linkedin-in"></i></div>
-            <div class="icon"><i class="fab fa-behance"></i></div>
-            <div class="icon"><i class="fab fa-github"></i></div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section class="projects" id="projects">
+    <div class="section-title">
+        <h2>My Projects</h2>
+        <p>Check out some of the projects I've worked on.</p>
+    </div>
+
+    <div class="projects-container">
+        <!-- Poultry Management System -->
+        <div class="project-card">
+            <div class="project-info">
+                <h3>Poultry Management System</h3>
+                <p>An efficient system for managing poultry farms, keeping track of inventory, growth, sales, and finances.</p>
+                <a href="https://github.com/Bakarijack/Poultry-Management-System" class="btn" target="_blank">View Project</a>
+
+            </div>
         </div>
-        <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Siraj Mustafa</a>. All rights reserved 2024</p>
-      </footer>
-    </div>  
+
+        <!-- Angular-React Web Application -->
+        <div class="project-card">
+            <div class="project-info">
+                <h3>Android Menu Application</h3>
+                <p>A hybrid web application built using Angular and React for seamless user experience and performance.</p>
+                <a href="" class="btn" target="_blank">View Project</a>
+
+            </div>
+        </div>
+
+        <!-- Real Estate Management System -->
+        <div class="project-card">
+            <div class="project-info">
+                <h3>Real Estate Management System</h3>
+                <p>A comprehensive platform to manage real estate properties, listings, transactions, and customer interactions.</p>
+                <a href="https://github.com/Bakarijack/real-estate-angular-web-app" class="btn" target="_blank">View Project</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Testimonial Section--> 
+<section class="testimonial" id="testimonial">
+    <div class="container">
+        <h2 class="section-title text-center">What Clients Say About Us</h2>
+
+        <div class="testimonial-slider">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-item">
+                <div class="user-image">
+                    <img src="istockphoto-1437047112-612x612.jpg" alt="Client 1">
+                </div>
+                <p class="testimonial-text">
+                    "Bakari's dedication and creativity are unmatched. His projects are a reflection of his passion for perfection."
+                </p>
+                <h4 class="user-name">Siraj Mustafa</h4>
+                <span class="user-role">CEO, CreativeTech</span>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-item">
+                <div class="user-image">
+                    <img src="depositphotos_535666422-stock-photo-studio-head-shot-of-a.jpg" alt="Client 2">
+                </div>
+                <p class="testimonial-text">
+                    "I highly recommend Bakari for any challenging projects. His problem-solving skills are truly remarkable."
+                </p>
+                <h4 class="user-name">Ramadhan Aiyeko</h4>
+                <span class="user-role">Colleague</span>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-item">
+                <div class="user-image">
+                    <img src="portrait-young-investor-banker-workplace-260nw-2364566447.webp" alt="Client 3">
+                </div>
+                <p class="testimonial-text">
+                    "Efficiency, innovative, and reliable. All are key values of Bakari!"
+                </p>
+                <h4 class="user-name">Swabr Kesi</h4>
+                <span class="user-role">Founder, DesignHub</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contacts" class="contact-section">
+    <div class="container">
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-description">
+            Let's bring your ideas to life! Use the form below to book an appointment or share the details of your project.
+        </p>
+        <form id="bookingForm">
+            <input type="text" id="fname" name="fname" placeholder="Full Name" required>
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
+            <input type="text" id="phone" name="phone" placeholder="Phone Number" required>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="responseMessage"></div>
+</section>
+
+<!--Footer Section-->
+<footer class="wave-footer">
+    <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+    </div>
+    <div class="footer-content">
+        <h3>Bakari Portfolio</h3>
+        <p>Thank you for visiting! Feel free to reach out for projects, collaborations, or consultations.</p>
+        <ul class="social-icons">
+            <li><a href=""><i class='bx bxl-facebook'></i></a></li>
+            <li><a href="https://www.linkedin.com/in/bakari-kilu-3a9485233"><i class='bx bxl-linkedin'></i></a></li>
+            <li><a href="https://avatars.githubusercontent.com/u/73841719?v=4"><i class='bx bxl-github'></i></a></li>
+            <li><a href=""><i class='bx bxl-twitter'></i></a></li>
+        </ul>
+        <p> @  2024 Bakari | All Rights Reserved</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>  <!-- Assuming script.js is your JS file -->
+
 </body>
 </html>
